@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <div id="nav-bar">
+                <nav>
+                    <h1 class="logo">Kevin's Site</h1>
+
+                    <ul>
+                        <li class="nav-item"><a href="index.html"> Home </a></li>
+                        <li class="nav-item"><a href="#About"> About </a></li>
+                        <li class="nav-item"><a href="#portfolio"> Projects </a></li>
+
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="header-text">
+                <p>Computer Science Student</p>
+                <h1>Hi, I am <span>Kevin Naveen</span><br> From Canada</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <section id="content-grid">
+        <div class="container">
+            <div class="grid">
+                <div class="grid-item">Grid Item 1</div>
+                <div class="grid-item">Grid Item 2</div>
+                <div class="grid-item">Grid Item 3</div>
+            
+            </div>
+        </div>
+    </section>  -->
+
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./Images/about-me.jpg" alt="About-me image">
+
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+
+                    <p>Hello I am kevin Naveen, I am a 3rd year comptuer science student at The University of Ottawa and
+                        am interested in exploring the multitude of softwares and programming concepts. </p>
+                    <div class="tabs">
+                        <p class="tab-link link-active" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-link" onclick="opentab('experience')">Education</p>
+                        <p class="tab-link" onclick="opentab('education')">Experience</p>
+                    </div>
+                    <div class="content-tab active-tab" id="skills">
+                        <ul>
+
+                            <li><span>Web Development</span> Designing a website layout with html and css, primarily
+                                front-end development. Experienced with grid, flexbox, and some experience with
+                                bootstrap</li>
+                            <li><span>Game Development</span> Experience using the unity Game engine alongside c#,
+                                creating threads, game loops, and linking game objects to code</li>
+                        </ul>
+                    </div>
+                    <div class="content-tab" id="experience">
+                        <ul>
+                            <li><span>Emerdepot</span> Utilizing shopify to increase search engine optimization through
+                                blogs and on-screen optimization. Filing orders through Zoho and eshipper to fullfill
+                                them</li>
+
+                        </ul>
+                    </div>
+                    <div class="content-tab" id="education">
+                        <ul>
+                            <li><span> Harbord Collegiate Institute</span> OSSD obtained with Harbord Lily Wolfsted
+                                Award
+                                given upon graduation</li>
+                            <li><span> University of Ottawa</span> Currently enrolled in a bachelor of Computer Science
+                                with co-op program, in year 3 of 4</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+
+                    <img src="Images/SpaceShooterPrev.png" style="width: auto;max-height: 100%;" alt="">
+                    <div class="layer">
+                        <h3>2D Space Shooter Unity Game</h3>
+                        <p>An application made with c# and the Unity game engine, a simple game involving a spawn
+                            generator and multiple enemies. Currently work in progress</p>
+                        <a href="https://github.com/Kevin-Nav07/Space-Shooting-Game"><img src="Images/link-icon.png"
+                                alt="space shooter game image"></a>
+                    </div>
+                </div>
+                <div class="work">
+
+                    <img src="Images/PlatformerGamePrev.png" style="width: auto;max-height: 100%;">
+                    <div class="layer">
+                        <h3>2D Platformer Game</h3>
+                        <p>2D rpg entirely built froms scratch using Java. Work in progress and currently last on
+                            priority list</p>
+                        <a href="https://github.com/Kevin-Nav07/MyPlatformerGame"><img src="Images/link-icon.png"
+                                alt="platformer game image"></a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- <a href="#" class="btn">See more</a> -->
+        </div>
+    </div>
+</body>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-link");
+    var tabcontents = document.getElementsByClassName("content-tab");
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("link-active")
+
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("link-active");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+
+</script>
+
+</html>
